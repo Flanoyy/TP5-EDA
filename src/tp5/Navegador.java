@@ -26,13 +26,28 @@ public class Navegador {
         if(URL!=this.actual){
             this.atras.push(this.actual);
             this.actual=URL;
-            this.adelante=Pila.crearPilaVacia();
+            this.adelante=PilaInt.crearPilaVacia();
         }
     }
     
     public int atras(){
         this.adelante.push(this.actual);
-        
         this.actual=this.atras.top();
+        this.atras.pop();
+        return this.actual;
+    }
+    
+    public int adelante(){
+        if(this.adelante.cantidad==0){
+            return this.actual;
+        }else{
+            this.atras.push(this.actual);
+            this.actual=this.adelante.top();
+            this.adelante.pop();
+            return this.actual;
+        }
+    }
+    public static void main(String[] args) {
+        
     }
 }

@@ -116,13 +116,13 @@ public class Pila {
     }
     
     //TOP
-    public int top(){
-        return this.tope.getItem().i;
+    public Item top(){
+        return this.tope.getItem();
     }
     
     //Fondo
-    public int fondo(){
-        return this.fondo.getItem().i;
+    public Item fondo(){
+        return this.fondo.getItem();
     }
     
     //Mostrar

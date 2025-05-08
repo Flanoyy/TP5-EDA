@@ -107,13 +107,13 @@ public class PilaInt {
     }
     
     //TOP
-    public Item top(){
-        return this.tope.getItem();
+    public int top(){
+        return this.tope.getItem().i;
     }
     
     //Fondo
-    public Item fondo(){
-        return this.fondo.getItem();
+    public int fondo(){
+        return this.fondo.getItem().i;
     }
     
     //Mostrar
